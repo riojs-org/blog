@@ -1,0 +1,48 @@
+safe:        false
+baseurl:     /
+url: http://blog.riojs.org/
+
+name: RioJS
+description: A community of javascript developers.
+url: http://blog.riojs.org/
+domain: blog.riojs.org
+commentlinks: true
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+paginate_path: 'blog/pagina:num'
+
+future:      true
+lsi:         false
+highlighter: pygments
+markdown:    kramdown
+permalink:   /:title/
+paginate: 5
+
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
+
+rdiscount:
+  extensions: []
+
+kramdown:
+  auto_ids: true,
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
+
+excerpt_separator: "<!-- more -->"

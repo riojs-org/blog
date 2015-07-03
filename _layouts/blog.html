@@ -1,0 +1,47 @@
+{% include header.html %}
+
+	<div class='main'>
+		<div class="container">
+			<ul id="posts">
+    		{% for post in paginator.posts %}
+    			{% unless post.draft %}
+      			<li class="post">
+      			{% if post.link %}
+      				<h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
+        		{% else %}
+        			<h2><a href="#">{{ post.title }}</a></h2>
+        		{% endif %}
+				    {% if post.excerpt %}
+        			{{ post.excerpt | markdownify }}
+        				<a href="{{ post.url }}">Continuar lendo</a>
+      			{% else %}
+      					{{ post.content }}
+      			{% endif %}
+          </li>
+		  		{% endunless %}
+      	{% endfor %}
+      </ul>
+
+     <br><br>
+     <!-- Paginação -->
+     
+     <p>
+     {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+          <a href="/blog">Anterior</a>
+        {% else %}
+          <a href="/blog/pagina{{paginator.previous_page}}">Anterior</a>
+        {% endif %}
+     {% else %}
+       <!-- Caso não haja página anterior -->
+     {% endif %}
+
+    {{paginator.page}}</strong> / <strong>{{paginator.total_pages}}</strong></span>
+     {% if paginator.next_page %}
+       <a href="/blog/pagina{{paginator.next_page}}">Próxima</a>
+     {% else %}
+       <!-- Caso não haja próxima página -->
+     {% endif %}
+     </p>
+
+{% include footer.html %}
