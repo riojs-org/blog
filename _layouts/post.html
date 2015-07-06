@@ -1,0 +1,25 @@
+{% include header.html %}
+
+  <div class='main'>
+
+    <div class="container">
+        <ul id="posts">
+            <li>
+                {% if page.link %}
+                    <h2><a href="{{ page.link }}">{{ page.title }}</a></h2>
+                {% else %}
+                    <h2>{{ page.title }}</h2>
+                {% endif %}
+                <div class="post-content">
+                    {{ content }}
+                </div>
+                <div class="post-comments">
+                    {% include disqus.html %}
+                </div>
+            </li>
+        </ul>
+
+    </div> <!-- /content -->
+  </div> <!-- /container -->
+
+{% include footer.html %}
