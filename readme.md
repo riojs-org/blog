@@ -14,13 +14,13 @@ Este repositório tem o objetivo de concentrar todas as informações sobre o de
 3. Agora clone o projeto
 
   ```sh
-  $ git clone git@github.com:raphamorim/raphamorim.github.com.git
+  $ git clone git@github.com:riojs-org/blog.git
   ```
 
 4. Abra a pasta do projeto
 
   ```sh
-  $ cd raphamorim.github.com
+  $ cd blog
   ```
 
 5. E finalmente rode:
@@ -30,6 +30,38 @@ Este repositório tem o objetivo de concentrar todas as informações sobre o de
   ```
 
 Agora você tem acesso ao blog em `http://0.0.0.0:4000/` :D
+
+## Como contribuir
+
+1. Crie uma branch para o seu post:
+
+  ```sh
+  git checkout -b post/titulo-do-post
+  ```
+
+
+2. Crie um arquivo na pasta `_posts` com a data e título do seu post respeitando a seguinte regra:
+
+  ```sh
+  ANO-MES-DIA-titulo-do-post.md
+  ```
+
+3. Escreva um **post irado** com markdown e lembre-se de linkar o seu usuário para a sua página do Github.
+
+4. Faça o commit com o seu post.
+
+        $ git add .
+        $ git commit -am 'post: Título do post'
+
+5. Faça o push do seu branch.
+
+        $ git push origin post/titulo-do-post
+
+6. Crie um pull request através da interface web do GitHub.
+
+### Markdown
+
+A sintaxe que usamos para escrever os posts é a markdown. Se precisar de ajuda, tem esse guia aqui para te dar uma força [cheatsheet](http://markdown.chibi.io/)
 
 
 ## Mantenedores
