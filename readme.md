@@ -14,13 +14,13 @@ Este repositório tem o objetivo de concentrar todas as informações sobre o de
 3. Agora clone o projeto
 
   ```sh
-  $ git clone git@github.com:raphamorim/raphamorim.github.com.git
+  $ git clone git@github.com:riojs-org/blog.git
   ```
 
 4. Abra a pasta do projeto
 
   ```sh
-  $ cd raphamorim.github.com
+  $ cd blog
   ```
 
 5. E finalmente rode:
