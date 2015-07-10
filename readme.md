@@ -36,8 +36,7 @@ Agora você tem acesso ao blog em `http://0.0.0.0:4000/` :D
 1. Crie uma branch para o seu post:
 
   ```sh
-  $ git branch post/titulo-do-post
-  $ git checkout post/titulo-do-post
+  git checkout -b post/titulo-do-post
   ```
 
 
@@ -56,7 +55,7 @@ Agora você tem acesso ao blog em `http://0.0.0.0:4000/` :D
 
 5. Faça o push do seu branch.
 
-        $ git push --set-upstream origin post/titulo-do-post
+        $ git push origin post/titulo-do-post
 
 6. Crie um pull request através da interface web do GitHub.
 
