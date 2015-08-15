@@ -10,5 +10,13 @@ description: "RioJs Descrição"
 {% for event in site.events %}
 
     <p>{{ event.title }}</p>
+    <p>{{ event.date }}</p>
+
+    {% for talk in event.talks %}
+        <p>{{ talk.name }}</p>
+        <p>{{ talk.title }}</p>
+        <p>{{ talk.link }}</p>
+        <p>{{ talk.avatar }}</p>
+    {% endfor %}
 
 {% endfor %}
