@@ -1,0 +1,19 @@
+---
+layout: home
+title: RioJs
+class: home
+description: "RioJs Descrição"
+---
+
+<h1>RioJs</h1>
+
+<p>Você está na página inicial</p>
+
+
+{% for post in site.posts %}
+
+	<p>{{ post.title }}</p>
+
+{% endfor %}
+
+<a href="{{ "blog" | prepend: site.baseurl }}">Visite o blog</a>
