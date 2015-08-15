@@ -46,3 +46,6 @@ kramdown:
     coderay_css: style
 
 excerpt_separator: "<!-- more -->"
+
+sass:
+    sass_dir: assets/css

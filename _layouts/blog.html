@@ -11,20 +11,25 @@
         		{% else %}
         			<h2><a href="#">{{ post.title }}</a></h2>
         		{% endif %}
-				    {% if post.excerpt %}
+            {{ post.author }}
+            <br>
+            {{ post.date }}
+            <br>
+            {% if post.excerpt %}
         			{{ post.excerpt | markdownify }}
         				<a href="{{ post.url }}">Continuar lendo</a>
       			{% else %}
       					{{ post.content }}
       			{% endif %}
           </li>
+          <br>
+          <br>
 		  		{% endunless %}
       	{% endfor %}
       </ul>
 
      <br><br>
      <!-- Paginação -->
-     
      <p>
      {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
