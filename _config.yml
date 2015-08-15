@@ -46,3 +46,11 @@ kramdown:
     coderay_css: style
 
 excerpt_separator: "<!-- more -->"
+
+collections:
+  events:
+    output: true
+  projects:
+    output: true
+  colaborators:
+    output: true
