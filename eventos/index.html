@@ -6,3 +6,9 @@ description: "RioJs Descrição"
 ---
 
 <h1>Eventos</h1>
+
+{% for event in site.events %}
+
+    <p>{{ event.title }}</p>
+
+{% endfor %}

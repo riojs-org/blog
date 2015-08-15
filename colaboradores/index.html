@@ -6,3 +6,10 @@ description: "RioJs Descrição"
 ---
 
 <h1>Colaboradores</h1>
+
+
+{% for colaborator in site.colaborators %}
+
+    <p>{{ colaborator.title }}</p>
+
+{% endfor %}

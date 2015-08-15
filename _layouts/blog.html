@@ -11,16 +11,9 @@
         		{% else %}
         			<h2><a href="#">{{ post.title }}</a></h2>
         		{% endif %}
-            {{ post.author }}
-            <br>
-            {{ post.date }}
-            <br>
-            {% if post.excerpt %}
-        			{{ post.excerpt | markdownify }}
-        				<a href="{{ post.url }}">Continuar lendo</a>
-      			{% else %}
-      					{{ post.content }}
-      			{% endif %}
+
+            {{ post.content | truncatewords:site.post.content_preview | markdownify }}
+            <a href="{{ post.url }}">Continuar lendo</a>
           </li>
           <br>
           <br>
