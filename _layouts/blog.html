@@ -10,13 +10,10 @@
       				<h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
         		{% else %}
         			<h2><a href="#">{{ post.title }}</a></h2>
-        		{% endif %}
-				    {% if post.excerpt %}
-        			{{ post.excerpt | markdownify }}
-        				<a href="{{ post.url }}">Continuar lendo</a>
-      			{% else %}
-      					{{ post.content }}
-      			{% endif %}
+        		{% endif %}				    
+      			
+            {{ post.content | truncatewords:site.post.content_preview | markdownify }}
+            <a href="{{ post.url }}">Continuar lendo</a>
           </li>
 		  		{% endunless %}
       	{% endfor %}
