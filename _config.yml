@@ -47,3 +47,11 @@ kramdown:
 
 post:
   content_preview: 40
+
+collections:
+  events:
+    output: true
+  projects:
+    output: true
+  colaborators:
+    output: true
