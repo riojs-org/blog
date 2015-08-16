@@ -21,6 +21,7 @@ body
 header
 	background: $yellow
 	padding: $spacing-unit/2
+	min-height: 100px
 
 .main-nav
 	position: absolute
@@ -50,7 +51,10 @@ header
 	padding: $spacing-unit*3.5 0
 	background: gray
 	height: 400px
-	background: url(../img/rio-de-janeiro.jpg)
+	background: url(../img/rio-de-janeiro.jpg) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
 	background-size: cover
 	font-weight: 700
 	color: white
@@ -75,8 +79,33 @@ header
 	padding: 6px 8px
 	margin: 0 8px
 
+// Home ----------------------------------------------------------------------------------------
+.content
+	padding: $spacing-unit*2
+	h1
+		font-size: $base-font-size*3
+		margin: 0 0 $spacing-unit*1.5
+		text-transform: uppercase
+	p
+		margin: 0 0 $spacing-unit/2
+
+.home-content
+	text-align: center
 
 
+.button
+	border: 1px solid $black
+	padding: 4px 8px
+	text-transform: uppercase
+	color: $black
+	margin: $spacing-unit
+	display: inline-block
+
+
+// Footer ----------------------------------------------------------------------------------------
+footer
+	background: $yellow
+	padding: $spacing-unit/2
 
 
 
