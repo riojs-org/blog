@@ -45,5 +45,19 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
+
+excerpt_separator: "<!-- more -->"
+
+sass:
+    sass_dir: assets/css
+
 post:
   content_preview: 40
+
+collections:
+  events:
+    output: true
+  projects:
+    output: true
+  colaborators:
+    output: true

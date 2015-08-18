@@ -10,18 +10,19 @@
       				<h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
         		{% else %}
         			<h2><a href="#">{{ post.title }}</a></h2>
-        		{% endif %}				    
-      			
+        		{% endif %}
+
             {{ post.content | truncatewords:site.post.content_preview | markdownify }}
             <a href="{{ post.url }}">Continuar lendo</a>
           </li>
+          <br>
+          <br>
 		  		{% endunless %}
       	{% endfor %}
       </ul>
 
      <br><br>
      <!-- Paginação -->
-     
      <p>
      {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}

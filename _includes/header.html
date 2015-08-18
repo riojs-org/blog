@@ -12,16 +12,22 @@
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico" type="image/x-icon" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css" type="text/css" />
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-	
-	<nav>
-		<ul>
-			<li><a href="{{ site.baseurl }}">home</a></li>
-			<li><a href="{{ "eventos" | prepend: site.baseurl }}">eventos</a></li>
-			<li><a href="{{ "projetos" | prepend: site.baseurl }}" id="projetos">projetos</a></li>
-			<li><a href="{{ "colaboradores" | prepend: site.baseurl }}">colaboradores</a></li>
-			<li><a href="{{ "blog" | prepend: site.baseurl }}">blog</a></li>
-		</ul>
-	</nav>
+	<header>
+		<div class="container">
+			<h1><a href="{{ site.baseurl }}"><img src="{{ "assets/img/logo.png" | prepend: site.baseurl }}" alt=""></a></h1>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="{{ site.baseurl }}">Sobre</a></li>
+					<li><a href="{{ "eventos" | prepend: site.baseurl }}">Eventos</a></li>
+					<li><a href="{{ "agenda" | prepend: site.baseurl }}">Agenda</a></li>
+					<li><a href="{{ "projetos" | prepend: site.baseurl }}" id="projetos">Projetos</a></li>
+					<li><a href="{{ "colaboradores" | prepend: site.baseurl }}">Colaboradores</a></li>
+					<li><a href="{{ "blog/" | prepend: site.baseurl }}">Blog</a></li>
+				</ul>
+			</nav>
+			{% include social.html %}
+		</div>
+	</header>

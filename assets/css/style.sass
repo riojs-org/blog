@@ -1,0 +1,27 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8"
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif
+$base-font-size:   16px
+$small-font-size:  $base-font-size * 0.875
+$base-line-height: 1.5
+
+$spacing-unit:     30px
+
+$yellow: #F7DF1D
+$black: #000000
+
+// Width of the content area
+$content-width:    1200px
+$on-mobile:        600px
+$on-tablet:        960px
+
+@mixin media-query($device)
+    @media screen and (max-width: $device)
+        @content
+
+@import "reset"
+@import "layout"
