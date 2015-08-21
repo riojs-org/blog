@@ -26,7 +26,7 @@ Este repositório tem o objetivo de concentrar todas as informações sobre o de
 5. E finalmente rode:
 
   ```sh
-  $ jekyll
+  $ jekyll server
   ```
 
 Agora você tem acesso ao blog em `http://0.0.0.0:4000/` :D
