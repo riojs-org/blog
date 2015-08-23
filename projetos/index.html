@@ -4,11 +4,18 @@ title: Projetos
 class: home
 description: "RioJs Descrição"
 ---
-
-<h1>Conheça, compartilhe e contribua com nossos projetos</h1>
+<div id="TitleProject">
+	<h1>Conheça, compartilhe e contribua com nossos projetos</h1>
+</div>
 
 {% for project in site.projects %}
-
-    <p>{{ project.title }}</p>
-
+	
+	<div class="project">
+		<img src="{{ project.image }}" class="imgProject" alt="projetos blog">
+		<a href="{{ project.link }}">
+			<h2>{{ project.title }}</h2>
+		</a>	
+		<p>{{ project.description }}</p>
+	</div><!-- project END -->
+    
 {% endfor %}
