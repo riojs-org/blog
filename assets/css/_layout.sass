@@ -3,62 +3,119 @@ body
 	font-size: $base-font-size
 	line-height: $base-line-height
 
+// div,header,footer,nav,aside,article,section
+// 	border: 2px dashed #05bb22
+
 .container
-	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 1))
-	max-width:         calc(#{$content-width} - (#{$spacing-unit} * 1))
-	margin-right: auto
-	margin-left: auto
-	padding-right: $spacing-unit
-	padding-left: $spacing-unit
-	position: relative
+	@include row()
 
-	@include media-query($on-tablet)
-		max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}))
-		max-width:         calc(#{$content-width} - (#{$spacing-unit}))
-		padding-right: $spacing-unit / 2
-		padding-left: $spacing-unit / 2
+	// @include media-query($on-tablet)
+	// 	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}))
+	// 	max-width:         calc(#{$content-width} - (#{$spacing-unit}))
+	// 	padding-right: $spacing-unit / 2
+	// 	padding-left: $spacing-unit / 2
 
+// header ----------------------------------------------------------------------------------------
 header
 	background: $yellow
+	padding: $spacing-unit 0
+	@media screen and (max-width: 520px)
+		padding: 0
+
+//logo
+.logo
+	@include col(3)
+	// @include flex()
+	// @include vertical-align(middle)
+
+	@media screen and (max-width: 715px)
+		@include col(12)
+		text-align: center
+
+	@media screen and (max-width: 520px)
+		margin-top: $spacing-unit
+		margin-bottom: $spacing-unit
+		order: 2
+
+//nav
+.open-nav
+	@media screen and (min-width: 520px)
+		display: none
+	width: 100%
+	background: $black
+	color: $yellow
 	padding: $spacing-unit/2
-	min-height: 100px
+	display: block
+	&:hover
+		cursor: pointer
+
 
 .main-nav
-	position: absolute
-	bottom: 0
-	right: 0
+	@include col(9)
+	@include flex()
+	@include justify(right)
+	@include vertical-align(bottom)
 
-	li
-		display: inline-block
-		margin: 0 0 0 $spacing-unit/2
+	@media screen and (max-width: 715px)
+		@include col(12)
+		@include justify(center)
 
-	a
-		color: $black
+header .social
+	z-index: 2
+	@media screen and (max-width: 715px)
+		display: none
+
+.main-nav ul
+	margin-top: $spacing-unit
+
+@media screen and (max-width: 520px)
+	.main-nav ul
+		width: 100%
+		text-align: center
+		margin-top: 0
+
+.nav-item
+	display: inline-block
+
+	@media screen and (max-width: 520px)
+		display: list-item
+		order: 1
+
+.nav-item a
+	color: $black
+	margin: 0 0 0 $spacing-unit/4
+	display: inline-block
+	&:hover
+		text-decoration: underline
+
+	@media screen and (max-width: 520px)
+		display: block
+		padding: $spacing-unit/2 0
+		border-bottom: 1px solid $black
+		margin: 0
 		&:hover
-			border-bottom: 1px solid $black
+			background: $black
+			color: $yellow
 
+// social icons ----------------------------------------------------------------------------------------
 .social
 	position: absolute
 	top: 0
-	right: 0
+	right: $margin
 
-	li
-		display: inline-block
-		margin: 0 0 0 $spacing-unit/2
+.social li
+	display: inline-block
 
-	svg
-		background: $black
-		fill: $yellow
-		border-radius: 3px
-		width: 30px
-		height: 30px
-		display: inline-block
-		transition: 0.2s
-		&:hover
-			transform: scale(1.2)
-			border-radius: 50%
-
-
+.social svg
+	background: $black
+	fill: $yellow
+	border-radius: 3px
+	width: 30px
+	height: 30px
+	transition: .2s
+	&:hover
+		transform: scale(1.2)
+		border-radius: 50%
 
 // Featured ----------------------------------------------------------------------------------------
 .featured
@@ -91,8 +148,14 @@ header
 	border: 1px solid white
 	color: white
 	text-transform: uppercase
-	padding: 7px 45px
-	margin: 0 8px
+	padding: 10px 45px
+	margin: 10px 8px
+	@media screen and (max-width: 520px)
+		display: block
+		width: 100%
+		max-width: 220px
+		margin-left: auto
+		margin-right: auto
 
 // Home ----------------------------------------------------------------------------------------
 .content
@@ -140,8 +203,25 @@ header
 // Footer ----------------------------------------------------------------------------------------
 footer
 	background: $yellow
-	padding: $spacing-unit/2
+	padding: $spacing-unit/4 0
 
+.footer-copyleft
+	@include col(8)
+	@include flex
+	@include vertical-align(middle)
+	@media screen and (max-width: 620px)
+		@include col(12)
+		@include justify(center)
+		margin-bottom: $spacing-unit/2
+		margin-top: $spacing-unit/2
 
+.footer-social
+	@include col(4)
+	text-align: right
+	@media screen and (max-width: 620px)
+		@include col(12)
+		text-align: center
 
-
+.footer-social .social
+	position: relative
+	right: 0

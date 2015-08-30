@@ -17,17 +17,37 @@
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
 	<header>
 		<div class="container">
-			<h1><a href="{{ site.baseurl }}"><img src="{{ "assets/img/logo.png" | prepend: site.baseurl }}" alt=""></a></h1>
+			<div class="logo"><a href="{{ site.baseurl }}"><img src="{{ "assets/img/logo.png" | prepend: site.baseurl }}" alt=""></a></div>
+			<button class="open-nav" id="btnOpen">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25">
+            <desc iVinci="yes" version="4.6" gridStep="20" showGrid="no" snapToGrid="no" codePlatform="0"/>
+            <g id="Layer1" name="Layer 1" opacity="1">
+                <g id="Shape1">
+                    <desc shapeID="1" type="0" basicInfo-basicType="0" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-62,-12,124,24)" text="" font-familyName="" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(0.200095,0,0,0.200095,12.5,3.69583)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+                    <path id="shapePath1" d="M22.5047,1.2947 L2.49526,1.2947 C1.17464,1.2947 0.0941257,2.37521 0.0941257,3.69583 C0.0941257,5.01646 1.17464,6.09697 2.49526,6.09697 L22.5047,6.09697 C23.8254,6.09697 24.9059,5.01646 24.9059,3.69583 C24.9059,2.37521 23.8254,1.2947 22.5047,1.2947 Z" style="stroke:none;fill-rule:nonzero;fill:#f7df1d;fill-opacity:1;"/>
+                </g>
+                <g id="Shape2">
+                    <desc shapeID="2" type="0" basicInfo-basicType="0" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-62,-12,124,24)" text="" font-familyName="" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(0.200095,0,0,0.200095,12.5,12.5)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+                    <path id="shapePath2" d="M22.5047,10.0989 L2.49526,10.0989 C1.17464,10.0989 0.0941257,11.1794 0.0941257,12.5 C0.0941257,13.8206 1.17464,14.9011 2.49526,14.9011 L22.5047,14.9011 C23.8254,14.9011 24.9059,13.8206 24.9059,12.5 C24.9059,11.1794 23.8254,10.0989 22.5047,10.0989 Z" style="stroke:none;fill-rule:nonzero;fill:#f7df1d;fill-opacity:1;"/>
+                </g>
+                <g id="Shape3">
+                    <desc shapeID="3" type="0" basicInfo-basicType="0" basicInfo-roundedRectRadius="12" basicInfo-polygonSides="6" basicInfo-starPoints="5" bounding="rect(-62,-12,124,24)" text="" font-familyName="" font-pixelSize="20" font-bold="0" font-underline="0" font-alignment="1" strokeStyle="0" markerStart="0" markerEnd="0" shadowEnabled="0" shadowOffsetX="0" shadowOffsetY="2" shadowBlur="4" shadowOpacity="160" blurEnabled="0" blurRadius="4" transform="matrix(0.200095,0,0,0.200095,12.5,21.3042)" pers-center="0,0" pers-size="0,0" pers-start="0,0" pers-end="0,0" locked="0" mesh="" flag=""/>
+                    <path id="shapePath3" d="M22.5047,18.903 L2.49526,18.903 C1.17464,18.903 0.0941257,19.9835 0.0941257,21.3042 C0.0941257,22.6248 1.17464,23.7053 2.49526,23.7053 L22.5047,23.7053 C23.8254,23.7053 24.9059,22.6248 24.9059,21.3042 C24.9059,19.9835 23.8254,18.903 22.5047,18.903 Z" style="stroke:none;fill-rule:nonzero;fill:#f7df1d;fill-opacity:1;"/>
+                </g>
+            </g>
+        </svg>
+      </button>
+      {% include social.html %}
 			<nav class="main-nav">
-				<ul>
-					<li><a href="{{ site.baseurl }}">Home</a></li>
-					<li><a href="{{ "eventos" | prepend: site.baseurl }}">Eventos</a></li>
-					<li><a href="{{ "agenda" | prepend: site.baseurl }}">Agenda</a></li>
-					<li><a href="{{ "projetos" | prepend: site.baseurl }}" id="projetos">Projetos</a></li>
-					<li><a href="{{ "colaboradores" | prepend: site.baseurl }}">Colaboradores</a></li>
-					<li><a href="{{ "blog/" | prepend: site.baseurl }}">Blog</a></li>
+				<ul id="mainNav">
+					<li class="nav-item"><a href="{{ site.baseurl }}">Home</a></li>
+					<li class="nav-item"><a href="{{ "eventos" | prepend: site.baseurl }}">Eventos</a></li>
+					<li class="nav-item"><a href="{{ "agenda" | prepend: site.baseurl }}">Agenda</a></li>
+					<li class="nav-item"><a href="{{ "projetos" | prepend: site.baseurl }}" id="projetos">Projetos</a></li>
+					<li class="nav-item"><a href="{{ "colaboradores" | prepend: site.baseurl }}">Colaboradores</a></li>
+					<li class="nav-item"><a href="{{ "blog/" | prepend: site.baseurl }}">Blog</a></li>
 				</ul>
 			</nav>
-			{% include social.html %}
+
 		</div>
 	</header>
