@@ -61,7 +61,6 @@ header
 		@include justify(center)
 
 header .social
-	right: $margin
 	z-index: 2
 	@media screen and (max-width: 715px)
 		display: none
@@ -102,7 +101,7 @@ header .social
 .social
 	position: absolute
 	top: 0
-	right: 0
+	right: $margin
 
 .social li
 	display: inline-block
@@ -198,4 +197,25 @@ header .social
 // Footer ----------------------------------------------------------------------------------------
 footer
 	background: $yellow
-	padding: $spacing-unit/2
+	padding: $spacing-unit/4 0
+
+.footer-copyleft
+	@include col(8)
+	@include flex
+	@include vertical-align(middle)
+	@media screen and (max-width: 620px)
+		@include col(12)
+		@include justify(center)
+		margin-bottom: $spacing-unit/2
+		margin-top: $spacing-unit/2
+
+.footer-social
+	@include col(4)
+	text-align: right
+	@media screen and (max-width: 620px)
+		@include col(12)
+		text-align: center
+
+.footer-social .social
+	position: relative
+	right: 0
