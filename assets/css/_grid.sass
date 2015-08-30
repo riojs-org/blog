@@ -6,6 +6,14 @@ $max-width: 1200px
 $margin: 0.52083%
 $column: 7.29177%
 
+//flex
+
+@mixin flex()
+	display: -webkit-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+
 // Row
 
 @mixin row()
@@ -13,13 +21,11 @@ $column: 7.29177%
 	margin-right: auto
 	width: 100%
 	max-width: max-width
-	display: -webkit-box
-	display: -webkit-flex
-	display: -ms-flexbox
-	display: flex
+	@include flex()
 	-webkit-flex-wrap: wrap
 	-ms-flex-wrap: wrap
 	flex-wrap: wrap
+	position: relative
 
 // Columns
 
@@ -30,7 +36,7 @@ $column: 7.29177%
 
 // Offset
 
-@mixin ffset($number-of-offset)
+@mixin offset($number-of-offset)
 	margin-left: ($number-of-offset * $column) + ((($number-of-offset - 1) * 2) * $margin) + (3 * $margin)
 
 // Flex Container
@@ -69,7 +75,7 @@ $column: 7.29177%
 // Flex Itens
 
 @mixin vertical-align($vertical-value)
-	if ($vertical-value == top)
+	@if ($vertical-value == top)
 		-webkit-box-align: start
 		-webkit-align-items: flex-start
 		-ms-flex-align: start
@@ -78,7 +84,7 @@ $column: 7.29177%
 		-ms-flex-line-pack: start
 		align-content: flex-start
 
-	if ($vertical-value == middle)
+	@if ($vertical-value == middle)
 		-webkit-box-align: center
 		-webkit-align-items: center
 		-ms-flex-align: center
@@ -87,7 +93,7 @@ $column: 7.29177%
 		-ms-flex-line-pack: center
 		align-content: center
 
-	if ($vertical-value == bottom)
+	@if ($vertical-value == bottom)
 		-webkit-box-align: end
 		-webkit-align-items: flex-end
 		-ms-flex-align: end
