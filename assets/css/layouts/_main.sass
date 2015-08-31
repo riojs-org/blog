@@ -1,0 +1,13 @@
+.container
+	@include row()
+
+.content
+	padding: $spacing-unit*2 0
+	@include col(10)
+	@include offset(1)
+	@media screen and (max-width: 890px)
+		@include col(12)
+		@include offset(0)
+
+.center
+	text-align: center

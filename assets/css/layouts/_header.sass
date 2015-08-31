@@ -1,0 +1,78 @@
+header
+	background: $yellow
+	padding: $spacing-unit 0
+	@media screen and (max-width: 520px)
+		padding: 0
+
+header .social
+	z-index: 2
+	@media screen and (max-width: 715px)
+		display: none
+
+//logo
+.logo
+	@include col(3)
+
+	@media screen and (max-width: 715px)
+		@include col(12)
+		text-align: center
+
+	@media screen and (max-width: 520px)
+		margin-top: $spacing-unit
+		margin-bottom: $spacing-unit
+		order: 2
+
+//nav
+.open-nav
+	@media screen and (min-width: 520px)
+		display: none
+	width: 100%
+	background: $black
+	color: $yellow
+	padding: $spacing-unit/2
+	display: block
+	&:hover
+		cursor: pointer
+
+
+.main-nav
+	@include col(9)
+	@include flex()
+	@include justify(right)
+	@include vertical-align(bottom)
+
+	@media screen and (max-width: 715px)
+		@include col(12)
+		@include justify(center)
+
+.main-nav ul
+	margin-top: $spacing-unit
+
+@media screen and (max-width: 520px)
+	.main-nav ul
+		width: 100%
+		text-align: center
+		margin-top: 0
+
+.nav-item
+	display: inline-block
+
+	@media screen and (max-width: 520px)
+		display: list-item
+		order: 1
+
+.nav-item a
+	color: $black
+	margin: 0 0 0 $spacing-unit/4
+	display: inline-block
+	&:hover
+		text-decoration: underline
+
+	@media screen and (max-width: 520px)
+		display: block
+		padding: $spacing-unit/2 0
+		border-bottom: 1px solid $black
+		margin: 0
+		&:hover
+			background: $black
+			color: $yellow

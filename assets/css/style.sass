@@ -4,25 +4,66 @@
 @charset "utf-8"
 
 // Our variables
+// ----------------------------------------------------------------------------------------
+
+// Fonts
 $base-font-family: Helvetica, Arial, sans-serif
-$base-font-size:   16px
-$small-font-size:  $base-font-size * 0.875
+$base-font-size: 16px
+$small-font-size: $base-font-size * 0.875
 $base-line-height: 1.5
 
-$spacing-unit:     30px
+// Spacing pattern
+$spacing-unit: 30px
 
+// Colors
 $yellow: #F7DF1D
 $black: #000000
 
-// Width of the content area
-$content-width:    1200px
-$on-mobile:        600px
-$on-tablet:        960px
+// Global
+// ----------------------------------------------------------------------------------------
 
-@mixin media-query($device)
-    @media screen and (max-width: $device)
-        @content
+body
+	font-family: $base-font-family
+	font-size: $base-font-size
+	line-height: $base-line-height
 
-@import "reset"
-@import "grid"
-@import "layout"
+div,header,footer,nav,aside,article,section
+	border: 2px dashed #05bb22
+
+// Components
+// ----------------------------------------------------------------------------------------
+
+// Base
+@import "base/reset"
+@import "base/grid"
+
+// Layouts
+@import "layouts/header"
+@import "layouts/featured"
+@import "layouts/main"
+@import "layouts/footer"
+
+// Components
+@import "components/social-icons"
+@import "components/text"
+@import "components/buttons"
+
+//Projects ----------------------------------------------------------------------------------------
+// #TitleProject
+// 	h1
+// 		text-align: center
+// 		font-size: 25px
+// 		margin-top: 25px
+//
+// .project
+// 	margin-top: 25px
+// 	margin-bottom: 10px
+// 	.imgProject
+// 		float: left
+// 		margin-right: 20px
+// 		display: block
+// 	a
+// 		font-size: 18px
+// 		color: #000
+// 		h2
+// 			margin-bottom: 10px
