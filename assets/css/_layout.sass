@@ -159,7 +159,12 @@ header .social
 
 // Home ----------------------------------------------------------------------------------------
 .content
-	padding: $spacing-unit*2
+	padding: $spacing-unit*2 0
+	@include col(10)
+	@include offset(1)
+	@media screen and (max-width: 890px)
+		@include col(12)
+		@include offset(0)
 	h1
 		font-size: $base-font-size*3
 		margin: 0 0 $spacing-unit*1.5
@@ -170,15 +175,13 @@ header .social
 .home-content
 	text-align: center
 
-
 .button
 	border: 1px solid $black
-	padding: 7px 25px
+	padding: 10px 45px
 	text-transform: uppercase
 	color: $black
 	margin: $spacing-unit
 	display: inline-block
-
 
 // Projects ----------------------------------------------------------------------------------------
 #TitleProject
