@@ -1,7 +1,8 @@
 {% include header.html %}
 
-	<div class='main'>
-		<div class="container">
+<div class="container">
+	<div class="content">
+
 			<ul id="posts">
     		{% for post in paginator.posts %}
     			{% unless post.draft %}
@@ -41,5 +42,8 @@
        <!-- Caso não haja próxima página -->
      {% endif %}
      </p>
+
+	</div>
+</div>
 
 {% include footer.html %}

@@ -5,18 +5,20 @@ class: home
 description: "RioJs Descrição"
 ---
 
-<h1>Confira o que rolou nos últimos encontros</h1>
+<div class="content-title">
+  <h1 class="heading-lv1">Confira o que rolou nos últimos encontros</h1>
 
-{% for event in site.events %}
+  {% for event in site.events %}
 
-    <p>{{ event.title }}</p>
-    <p>{{ event.date }}</p>
+      <p>{{ event.title }}</p>
+      <p>{{ event.date }}</p>
 
-    {% for talk in event.talks %}
-        <p>{{ talk.name }}</p>
-        <p>{{ talk.title }}</p>
-        <p>{{ talk.link }}</p>
-        <p>{{ talk.avatar }}</p>
-    {% endfor %}
+      {% for talk in event.talks %}
+          <p>{{ talk.name }}</p>
+          <p>{{ talk.title }}</p>
+          <p>{{ talk.link }}</p>
+          <p>{{ talk.avatar }}</p>
+      {% endfor %}
 
-{% endfor %}
+  {% endfor %}
+</div>
