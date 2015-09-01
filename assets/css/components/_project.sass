@@ -1,0 +1,22 @@
+.project-img-container
+	@include col(3)
+	@include offset(1)
+	@media screen and (max-width: 890px)
+		@include col(12)
+		@include offset(0)
+		text-align:  center
+
+.project-img
+	width: 100%
+	max-width: 283px
+
+.project-description
+	@include col(7)
+	@media screen and (max-width: 890px)
+		@include col(12)
+		@include offset(0)
+		text-align:  center
+		margin-top: $spacing-unit
+
+.project-description a
+	color: #000
